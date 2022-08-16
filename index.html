@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>MLB BallPark Segregation Service API</title>
+                                                         </head>
+<body>
+<div class="container">
+    <h1>MLB BallPark Segregation Service API</h1>
+    <p class="sw-info">
+        
+        Version: <span class="sw-info-version">1.0.0</span>
+    </p>
+    <p><p>The MLB BallPark Segregation Service API provides REST-ful API to retrieve custom schedules of mlb games</p>
+    </p>
+    
+    
+    <div id="sw-schemes" class="sw-default-value">
+        <span class="sw-default-value-header">Schemes:</span>
+        
+    </div>
+    
+        <h2 id="swagger--summary-no-tags">Summary</h2>
+        <table class="table table-bordered table-condensed swagger--summary">
+            <thead>
+            <tr>
+                <th>Path</th>
+                <th>Operation</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                            <td class="swagger--summary-path" rowspan="1">
+                                <a href="#path--api-v1-teams--id--schedule">/api/v1/teams/{id}/schedule</a>
+                            </td>
+                        <td>
+                            <a href="#operation--api-v1-teams--id--schedule-get">GET</a>
+                        </td>
+                        <td>
+                            <p>Retrieve a schedule of games</p>
+        
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    
+    
+    
+    <h2>Paths</h2>
+    
+        
+        <span id="path--api-v1-teams--id--schedule"></span>
+            <div id="operation--api-v1-teams--id--schedule-get" class="swagger--panel-operation-get panel">
+                <div class="panel-heading">
+                    <div class="operation-summary">Retrieve a schedule of games</div>
+                    <h3 class="panel-title"><span class="operation-name">GET</span> <strong>/api/v1/teams/{id}/schedule</strong></h3>
+                        Tags:
+                            <a href="#tag-Scheduler">Scheduler</a>
+                </div>
+                <div class="panel-body">
+                    <section class="sw-operation-description">
+                        <p>Retrieves a schedule of games</p>
+            
+                    </section>
+            
+                    
+                        <section class="sw-request-params">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="sw-param-name"></th>
+                                    <th class="sw-param-description"></th>
+                                    <th class="sw-param-type"></th>
+                                    <th class="sw-param-data-type"></th>
+                                    <th class="sw-param-annotation"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>
+                                                date
+                                            </td>
+                                            <td><p>The date (YYYY-mm-dd) used to get all games scheduled on that day</p>
+                                        </td>
+                                            <td>query</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                id
+                                            </td>
+                                            <td><p>The unique identifier of the team</p>
+                                        </td>
+                                            <td>path</td>
+                                            <td>
+                                        <span class="json-property-type">object</span>
+                                        <span class="json-property-range" title="Value limits"></span>
+                                        
+                                            </td>
+                                            <td>
+                                                    <span class="json-property-required"></span>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    
+                        <section class="sw-responses">
+                    
+                            <dl>
+                                    <dt class="sw-response-200">
+                                        200 OK
+                                    
+                                    </dt>
+                                    <dd class="sw-response-200">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>OK response.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                                    <dt class="sw-response-400">
+                                        400 Bad Request
+                                    
+                                    </dt>
+                                    <dd class="sw-response-400">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>bad_request: Bad Request response.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                                    <dt class="sw-response-404">
+                                        404 Not Found
+                                    
+                                    </dt>
+                                    <dd class="sw-response-404">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>not_found: Not Found response.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                                    <dt class="sw-response-500">
+                                        500 Internal Server Error
+                                    
+                                    </dt>
+                                    <dd class="sw-response-500">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>internal_error: Internal Server Error response.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                                    <dt class="sw-response-502">
+                                        502 Bad Gateway
+                                    
+                                    </dt>
+                                    <dd class="sw-response-502">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p>bad_gateway: Bad Gateway response.</p>
+                                            
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-6 sw-response-model">
+                                            </div>
+                                            
+                                            </div>                </dd>
+                            </dl>
+                        </section>
+                </div>
+            </div>
+    
+     
+    
+                       
+    
+</div>
+
+</body>
+</html>
